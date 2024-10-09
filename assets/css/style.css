@@ -499,9 +499,88 @@ li a, a {
   #HERO
 \*-----------------------------------*/
 
+.hero{
+  color: var(--cadet-gray);
+  text-align: center;
+  padding-block-start: calc(var(--section-padding) + 80px);
+  padding-block-end: 0;
+  overflow: hidden;
+  margin: 0.8% 3%;
+  border-radius: var(--radius-10);
+  border-radius: var(--radius-15);
+}
 
 
+.hero-content{
+  margin-block-end: 90px;
+}
 
+.hero-subtitle{
+  background-color: var(--white_10);
+  color: var(--white);
+  margin-inline: auto;
+  padding: 5px;
+  padding-inline-end: 15px;
+  border-radius: var(--radius-13);
+}
+
+
+.hero-subtitle .strong{
+  display: inline-block;
+  background-color: var(--coquelicot);
+  padding: 2px 15px;
+  margin-inline-end: 15px;
+  border-radius: var(--radius-10);
+}
+
+.hero-title{
+  margin-block: 30px 8px;
+}
+
+.hero .section-text{
+  margin-block-end: 40px;
+}
+
+.hero.btn{
+  margin-inline: auto;
+}
+
+.hero-banner{
+  position: relative;
+}
+
+
+.abs-img-1{
+  top: 20px;
+  right: -50px;
+  width: 190px;
+}
+
+.abs-img-2{
+  bottom: 20px;
+  left: -50px;
+  width: 190px;
+}
+.hero .abs-img{
+  animation: move 3s linear infinite alternate;
+}
+
+@keyframes move {
+  0%{
+    transform: translate(0, 0);
+  }
+  50%{
+    transform: translate(-5px , 10px);
+  }
+  100%{
+    transform: translate(5px, 20px);
+  }
+  
+}
+
+.hero .abs-img-2{
+  animation-direction: alternate-reverse;
+}
 
 /*-----------------------------------*\
   #ABOUT
