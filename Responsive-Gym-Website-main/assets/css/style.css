@@ -455,7 +455,7 @@ li a, a {
 .navbar.active{
   visibility: visible;
   transform: translateY(-100%);
-  transition: 0.5s --cubic-out;
+  transition: 0.5s var(--cubic-out);
 
 }
 
@@ -468,8 +468,17 @@ li a, a {
   font-size: 40px;
   padding: 10px;
   border-radius: var(--radius-13);
+  transition: all 0.4s ease-out;
 }
 
+.nav-close-btn:hover ion-icon{
+  transform: rotate(180deg);
+  transition: all 0.4s ease-out;
+}
+
+.nav-close-btn:hover{
+  box-shadow:var(--shadow-1);
+}
 .navbar-link{
   font-family: var(--ff-catamaran);
   font-size: var(--fs-4);
