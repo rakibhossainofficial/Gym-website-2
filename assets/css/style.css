@@ -703,7 +703,7 @@ li a, a {
   font-size: var(--fs-3);
 
 }
-
+  /* video-play animation */
 .play-btn{
   background-color: var(--coquelicot);
   color: var(--white);
