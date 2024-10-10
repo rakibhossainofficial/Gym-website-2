@@ -131,19 +131,21 @@ body{
 }
 
 ::-webkit-scrollbar{
-  width: 5px;
-
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track{
   background-color: var(--light-gray);
 }
 
-::-webkit-slider-thumb{
+::-webkit-scrollbar-thumb{
   background-color: var(--coquelicot);
+  border-radius: 20px;
 }
-::-webkit-slider-hover{
+
+::-webkit-scrollbar-thumb:hover{
   background-color: var(--rich-black-fogra-29-1);
+  transition: 0.2s;
 }
 
 li a, a {
@@ -366,7 +368,7 @@ li a, a {
 }
 
 .has-scrollbar::-webkit-slider-button{
-  width: calc(25%-25px);
+  width: calc(25% -25px);
 }
 
 
@@ -687,6 +689,7 @@ li a, a {
   overflow: hidden;
   padding: 30px 0;
   margin: 3%;
+  box-shadow: var(--shadow-2);
 }
 
 .video-card::before{
@@ -731,8 +734,85 @@ li a, a {
 \*-----------------------------------*/
 
 
+.class{
+  padding-block-start: calc(var(--section-padding) + 250px);
+  margin: 0 3%;
+  border-radius: var(--radius-15);
+}
+
+.class .section-subtitle{
+  margin-inline:auto;
+  text-align: center;
+}
+
+.class .section-title{
+  color: var(--white);
+}
+
+.class-card{
+  background-color: var(--white);
+  border-radius: var(--radius-15);
+  height: 100%;
+  overflow: hidden;
+}
+
+.class-card .card-content{
+  padding: 24px;
+}
 
 
+.class-card .card-banner img{
+  transition: var(--transition-2);
+}
+
+.class-card:is(:hover, :focus-within) .card-banner img{
+  transform: scale(1.1);
+}
+
+.class-card .title-wrapper{
+  display: flex;
+  align-items: center;
+}
+
+.class-card .title-icon{
+  padding-block-end: 20px;
+  margin-inline-end: 20px;
+  min-width: max-content;
+  border-inline-end: 1px solid var(--gainsboro);
+}
+
+.class-card .card-title{
+  transition: var(--transition-1);
+}
+
+.class-card .card-text{
+  color: var(--sonic-silver);
+  font-size: var(--fs-6);
+  margin-block: 16px 12px;
+}
+
+.class-card .progress-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-style: var(--ff-catamaran);
+  color: var(--rich-black-fogra-29-1);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-800);
+  margin-block-end: 8px;
+}
+
+.class-card .progress-bg{
+  background-color: var(--coquelicot_10);
+  border-radius: 50px;
+
+}
+
+.class-card .progress-bar{
+  background-color: var(--coquelicot);
+  height: 10px;
+  border-radius: inherit;
+}
 
 /*-----------------------------------*\
   #BLOG
