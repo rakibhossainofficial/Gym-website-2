@@ -346,6 +346,7 @@ li a, a {
   gap: 25px;
   overflow: auto;
   padding-block-end: 30px;
+  flex-direction: column;
   scroll-snap-type: inline mandatory;
 }
 
@@ -785,6 +786,7 @@ li a, a {
 }
 
 .class-card .card-title{
+  color: var(--rich-black-fogra-29-1);
   transition: var(--transition-1);
 }
 
@@ -1208,6 +1210,9 @@ li a, a {
     right: 50px;
 
   }
+  .has-scrollbar{
+    flex-direction: row;
+  }
 
   /* footer */
 
@@ -1373,8 +1378,11 @@ li a, a {
 
   .footer-top .container{
     grid-template-columns: 0.85fr 0.5fr 1fr 0.85fr;
-    
+
   }
+
+  /* vide 2:28  */
+  
 
 }
 
@@ -1382,3 +1390,89 @@ li a, a {
 
 
 /* -------- Responsive For Larger Than 1200px Screen -------- */
+
+@media (min-width: 1200px) {
+  /* custom property  */
+
+  :root{
+    /* typography */
+    --fs-1: 7rem;
+    --fs-2: 5.5rem;
+    --fs-3: 2.2rem;
+    --fs-5: 2rem;
+
+    /* spacing  */
+    --section-padding: 120px;
+
+  }
+
+  .container,
+  .header.container{
+    max-width: 1140px;
+  }
+
+  .btn{
+    padding: 18px 45px;
+    border-radius: var(--radius-15);
+  }
+
+  .section-subtitle{
+    --fs-5: 2.2rem;
+  }
+
+  .has-scrollbar{
+    gap: 30px;
+    flex-direction: row;
+  }
+
+  .scrollbar-item{
+    min-width: calc(33.33% - 20px);
+  }
+
+  /* header */
+
+  .header .container{
+    padding-inline: 0;
+  }
+
+  /* hero */
+
+  .hero .section-text{
+    --fs-6: 1.8rem;
+  }
+
+  .abs-img-1{
+    top: 170px;
+    right: -30px;
+    width: 260px;
+
+  }
+
+  /* about  */
+  .about-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .about .wrapper{
+    gap: 40px;
+  }
+
+  /* class, blog   */
+
+  :is(.class-card,  .blog-card) .card-content{
+    padding: 30px;
+  }
+
+  .blog-card .card-meta{
+    padding: 15px 30px;
+  }
+
+  /* footer */
+
+  .footer-top .container{
+    grid-template-columns: 1fr 0.6fr 0.9fr  1fr;
+  }
+}
